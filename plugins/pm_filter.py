@@ -1255,7 +1255,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
             else:
                 if clicked == typed:
-                    if IS_VERIFY and not await check_verification(
+                    if VERIFY and not await check_verification(
                         client, query.from_user.id
                     ):
                         btn = [
