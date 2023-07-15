@@ -1369,7 +1369,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         await query.answer()
-        if IS_VERIFY and not await check_verification(client, query.from_user.id):
+        if VERIFY and not await check_verification(client, query.from_user.id):
             btn = [
                 [
                     InlineKeyboardButton(
