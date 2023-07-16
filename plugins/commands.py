@@ -317,7 +317,7 @@ async def start(client, message):
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
-            await message.reply_text(text="<b>Please Search Again in Group</b>")
+            await message.reply_text(text="<b>ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴏᴛʜᴇʀ's ʟɪɴᴋ,Sᴇᴀʀᴄʜ Yᴏᴜʀ</b>")
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
