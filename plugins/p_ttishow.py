@@ -163,17 +163,21 @@ async def re_enable_chat(bot, message):
 
 
 @Client.on_message(filters.command('stats') & filters.incoming)
-async def get_ststs(bot, message):
+async def get_stats(bot, message):
     rju = await message.reply('Fetching stats..')
-    total_users = await db.total_users_count()
-    totl_chats = await db.total_chat_count()
+    total_chats = await db.total_chat_count()
     files = await Media.count_documents()
     size = await db.get_db_size()
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    await rju.edit(script.STATUS_TXT.format(files, total_chats, size, free))
 
+@Client.on_message(filters.command('userc') & filters.user(ADMINS) & filters.incoming)
+async def get_users_count(bot, message):
+    global users_count  # Make users count variable global
+    users_count = await db.total_users_count()
+    await message.reply(f"Total users count: {users_count}")
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
