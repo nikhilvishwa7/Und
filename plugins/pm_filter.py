@@ -266,6 +266,8 @@ async def next_page(bot, query):
                 off_set = offset - 10
             if n_offset == 0:
                 btn.append(
+                [InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
+                btn.append(
                     [
                         InlineKeyboardButton(
                             "⌫ 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"
@@ -277,6 +279,8 @@ async def next_page(bot, query):
                     ]
                 )
             elif off_set is None:
+                btn.append(
+                [InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
                 btn.append(
                     [
                         InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"),
@@ -290,6 +294,8 @@ async def next_page(bot, query):
                     ]
                 )
             else:
+                btn.append(
+                [InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
                 btn.append(
                     [
                         InlineKeyboardButton(
@@ -313,6 +319,8 @@ async def next_page(bot, query):
                 off_set = offset - int(MAX_B_TN)
             if n_offset == 0:
                 btn.append(
+                [InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
+                btn.append(
                     [
                         InlineKeyboardButton(
                             "⌫ 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"
@@ -324,6 +332,8 @@ async def next_page(bot, query):
                     ]
                 )
             elif off_set is None:
+                btn.append(
+                [InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
                 btn.append(
                     [
                         InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"),
@@ -337,6 +347,8 @@ async def next_page(bot, query):
                     ]
                 )
             else:
+                btn.append(
+                [InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
                 btn.append(
                     [
                         InlineKeyboardButton(
@@ -360,7 +372,7 @@ async def next_page(bot, query):
         else:
             off_set = offset - 10
         if n_offset == 0:
-            btn.append([InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
+           
             btn.append(
                 [
                     InlineKeyboardButton(
@@ -373,7 +385,8 @@ async def next_page(bot, query):
                 ]
             )
         elif off_set is None:
-            btn.append([InlineKeyboardButton("Language", callback_data=f"languages#{key}")])
+            
+            
             btn.append(
                 [
                     InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"),
