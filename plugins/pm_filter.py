@@ -156,12 +156,12 @@ async def pm_text(bot, message):
     if user_id in ADMINS:
         return  # ignore admins
     await message.reply_text(
-        text="<b>ʜᴇʏ ᴅᴜᴅᴇ 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ᴏɴ ᴏᴜʀ <a href=https://t.me/+U5LCBsaRDyc3Zjk9>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ​👇</b>",
+        text=f"<b>Nᴀᴍᴀsᴛʜᴇ {message.from_user.mention} Jɪ 😍 ,\n\nI Wᴏʀᴋ Oɴʟʏ Iɴ Gʀᴏᴜᴘs\nAᴅᴅ ᴍᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ</b>",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ​ 😊", url=f"https://t.me/+U5LCBsaRDyc3Zjk9"
+                        "Sᴜᴘᴘᴏʀᴛ 😊", url=f"https://t.me/+KK3luxGYqCg0Yjll"
                     )
                 ]
             ]
