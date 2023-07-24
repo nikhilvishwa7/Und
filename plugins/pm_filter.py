@@ -1992,7 +1992,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("🍂 ᴜᴘᴅᴀᴛᴇ🍂", url=CHNL_LNK),
-                InlineKeyboardButton("🫨 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ", url=GRP_LNK),
+                InlineKeyboardButton("🫨 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=GRP_LNK),
             ],
             [
                 InlineKeyboardButton("👻 ʜᴇʟᴘ", callback_data="help"),
