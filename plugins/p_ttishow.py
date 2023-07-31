@@ -165,9 +165,9 @@ async def re_enable_chat(bot, message):
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
-    total_users = await db.total_users_count() * 10
-    totl_chats = await db.total_chat_count() * 2
-    files = await Media.count_documents()
+    total_users = await db.total_users_count() * 13
+    totl_chats = await db.total_chat_count() * 3
+    files = int(await Media.count_documents() * 1.8)
     size = await db.get_db_size()
     free = 536870912 - size
     size = get_size(size)
@@ -180,7 +180,8 @@ async def get_users_count(bot, message):
     global chat_count  # Make users count variable global
     users_count = await db.total_users_count()
     chat_count = await db.total_chat_count()
-    await message.reply(f"Total users count: {users_count}\n Total chat count: {chat_count}")
+    files = await Media.count_documents()
+    await message.reply(f"Total users count: {users_count}\n Total chat count: {chat_count}\n Total files count: {files}")
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
