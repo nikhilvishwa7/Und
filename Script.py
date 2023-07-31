@@ -4,7 +4,8 @@ class script(object):
 ɪ ᴀᴍ ᴘᴏᴡᴇʀ ғᴜʟʟ ᴀɪ ᴀᴜᴛᴏ ғɪʟᴛᴇʀ ʙᴏᴛ
 ɪ ᴀᴍ ᴘᴍ sʜᴏʀᴛɴᴇʀ-ʟɪɴᴋ ʙᴏᴛ
 
-ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/Biisal">Bɪɪsᴀʟ</a></b> 😏</b>"""
+ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/Biisal">Bɪɪsᴀʟ</a> 😏
+ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ғɪʟᴛᴇʀ ʙᴏᴛ : <a href="https://t.me/Pm_link_yojana_bot">Pᴍ_ʟɪɴᴋ_ʏᴏᴊᴀɴᴀ_ʙᴏᴛ</a> (ғʀᴇᴇ)😊</b>"""
 
     
     HELP_TXT = """<b>Hᴇʏ {}
