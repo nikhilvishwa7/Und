@@ -1379,6 +1379,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=GRP_LNK),
                 ],[
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
+                ],[
+                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
+                  ],[
+                    InlineKeyboardButton('🚫  ᴅᴍᴄᴀ', url="https://telegra.ph/Contant-RemovalDMCA-07-30")
                 ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
