@@ -115,7 +115,7 @@ async def pm_text(bot, message):
 
     await bot.send_message(
         chat_id=LOG_CHANNEL,
-        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>",
+        text=f"<b>#𝐏𝐌_𝐌𝐄𝐒𝐒𝐀𝐆𝐄 Hare Krishna 🙏🏻\n\nNᴀᴍᴇ : {user}\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}\n\n</b>",
     )
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -189,7 +189,9 @@ async def next_page(bot, query):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("🔊sᴇʟᴇᴄᴛ ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
+                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
             ]
         )
     try:
@@ -419,10 +421,13 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("🔊sᴇʟᴇᴄᴛ ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-                #", callback_data=f"seasons#{key}")
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}")
+        ])
     else:
         btn = []
     
@@ -1370,8 +1375,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url=CHNL_LNK),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=GRP_LNK),
+                    InlineKeyboardButton('🍂 ᴜᴘᴅᴀᴛᴇ🍂', url=CHNL_LNK),
+                    InlineKeyboardButton('🫨 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
@@ -1847,8 +1852,9 @@ async def auto_filter(client, msg, spoll=False):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("🔊sᴇʟᴇᴄᴛ ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-                #", callback_data=f"seasons#{key}")
+                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
             ]
         )
     if offset != "":
@@ -1971,21 +1977,11 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
-            file_closed_del=await message.reply_photo(
-            photo=random.choice(CLOSE_IMG),
-            caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
-            await asyncio.sleep(15)                   
-            await file_closed_del.delete()
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
         await asyncio.sleep(300)
         await fuk.delete()
         await message.delete()
-        file_closed_del=await message.reply_photo(
-        photo=random.choice(CLOSE_IMG),
-        caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
-        await asyncio.sleep(15)                   
-        await file_closed_del.delete()
     # if spoll:
     #     await msg.message.delete()
 
