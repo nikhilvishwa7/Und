@@ -189,9 +189,7 @@ async def next_page(bot, query):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+                InlineKeyboardButton("‼️ ʟᴀɴɢᴜᴀɢᴇs ‼️", callback_data=f"languages#{key}"),
             ]
         )
     try:
@@ -421,8 +419,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton("‼️ ʟᴀɴɢᴜᴀɢᴇs ‼️", callback_data=f"languages#{key}")
             ]
         )
         btn.insert(0, [
@@ -608,18 +605,49 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     #     ENABLE_SHORTLINK = False
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
-        cap = f"<b>Nᴀᴍᴀsᴛᴇ {query.from_user.mention} ᴊɪ🥰,\nFᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\nɪɴ {remaining_seconds} sᴇᴄᴏɴᴅs 😊\n</b>"
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                ),
+            ]
+            for file in files
+        ]
     else:
-        # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"<b>Hᴇʏ {query.from_user.mention},Fᴏᴜɴᴅ Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
-        for file in files:
-            cap += f"<b>⭕ <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}",
+                    callback_data=f'{pre}#{file.file_id}',
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'{pre}#{file.file_id}',
+                ),
+            ]
+            for file in files
+        ]
+    btn.insert(0, [
+        InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
+    ])
+    
 
-    try:
-        await query.message.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
-    except MessageNotModified:
-        pass
-    await query.answer()
+    # btn.insert(0, [
+    #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
+    # ])
+    offset = 0
+
+    btn.append([
+            InlineKeyboardButton(
+                text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭",
+                callback_data=f"next_{req}_{key}_{offset}"
+                ),
+    ])
+
+
+    await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
+
+
                 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -1823,9 +1851,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+                InlineKeyboardButton("‼️ ʟᴀɴɢᴜᴀɢᴇs ‼️", callback_data=f"languages#{key}"),
             ]
         )
     if offset != "":
