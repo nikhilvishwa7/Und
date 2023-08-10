@@ -1610,10 +1610,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
-        monsize = await db.get_db_size()
+        total =int ( await Media.count_documents() * 1.8)
+        users = await db.total_users_count() * 13
+        chats = await db.total_chat_count() * 3 
+        monsize = await db.get_db_size() * 1.8
         free = 536870912 - monsize
         monsize = get_size(monsize)
         free = get_size(free)
@@ -1634,10 +1634,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
-        monsize = await db.get_db_size()
+        total =int ( await Media.count_documents() * 1.8)
+        users = await db.total_users_count() * 13
+        chats = await db.total_chat_count() * 3 
+        monsize = await db.get_db_size() * 1.8
         free = 536870912 - monsize
         monsize = get_size(monsize)
         free = get_size(free)
