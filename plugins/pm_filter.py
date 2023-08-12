@@ -69,26 +69,26 @@ async def give_filter(client, message):
         temp_files, temp_offset, total_results = await get_search_results(
             chat_id=message.chat.id, query=search.lower(), offset=0, filter=True
         )
-    if total_results == 0:
-        return
-    else:
-        reply_message = await message.reply_text(
-            text=f"<b>Hᴇʏ ᴅᴇᴀʀ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}.\n\nKɪɴᴅʟʏ ᴊᴏɪɴ ᴏᴜʀ ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs.\nOʀ ᴍᴀᴋᴇ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ᴛᴏ ɢᴇᴛ ᴍᴏᴠɪᴇ ғɪʟᴇs.\nTʜɪs ɪs ᴀ ᴅɪsᴄᴜssɪᴏɴ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ Gᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nहमारे ग्रुप ज्वाइन करे</b>",
-            reply_markup=InlineKeyboardMarkup(
-                [
+        if total_results == 0:
+            return
+        else:
+            reply_message = await message.reply_text(
+                text=f"<b>Hᴇʏ ᴅᴇᴀʀ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}.\n\nKɪɴᴅʟʏ ᴊᴏɪɴ ᴏᴜʀ ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs.\nOʀ ᴍᴀᴋᴇ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ᴛᴏ ɢᴇᴛ ᴍᴏᴠɪᴇ ғɪʟᴇs.\nTʜɪs ɪs ᴀ ᴅɪsᴄᴜssɪᴏɴ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ Gᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nहमारे ग्रुप ज्वाइन करे</b>",
+                reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton(
-                            "Mᴏᴠɪᴇ Gʀᴏᴜᴘ😊",
-                            url=f"https://t.me/+U5LCBsaRDyc3Zjk9",
-                        )
+                        [
+                            InlineKeyboardButton(
+                                "Mᴏᴠɪᴇ Gʀᴏᴜᴘ😊",
+                                url=f"https://t.me/+U5LCBsaRDyc3Zjk9",
+                            )
+                        ]
                     ]
-                ]
-            ),
-            parse_mode=enums.ParseMode.HTML,
-        )
+                ),
+                parse_mode=enums.ParseMode.HTML,
+            )
 
-        await asyncio.sleep(4 * 60)
-        await reply_message.delete()
+            await asyncio.sleep(4 * 60)
+            await reply_message.delete()
 
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
