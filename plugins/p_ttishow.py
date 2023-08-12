@@ -89,7 +89,6 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group', url="https://t.me/+PA8OPL2Zglk3MDM1"),
             InlineKeyboardButton('Owner', url="https://t.me/Biisal")
         ],[
             InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
@@ -97,7 +96,7 @@ async def leave_a_chat(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group, so i go! If you wanna add me again contact my Support Group or My Owner</b>',
+            text='<b>Hello Friends, \nɪ ʟᴇғᴛ 😞 ᴛʜᴇ ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ɪᴛ ᴅɪᴅn{{\'t}} ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴍᴇᴍʙᴇʀs, ᴀᴛ ʟᴇᴀsᴛ 100 ᴍᴇᴍʙᴇʀs.\n\nCᴏɴᴛᴀᴄᴛ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ ғᴏʀ sᴜᴘᴘᴏʀᴛ</b>',
             reply_markup=reply_markup,
         )
 
