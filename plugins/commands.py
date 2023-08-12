@@ -335,28 +335,29 @@ async def start(client, message):
         
     elif data.startswith("files"):
         user = message.from_user.id
-        if temp.SHORT.get(user)==None:
+        if temp.SHORT.get(user) is None:
             await message.reply_text(text="<b>ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴏᴛʜᴇʀ's ʟɪɴᴋ,Sᴇᴀʀᴄʜ Yᴏᴜʀ</b>")
         else:
             chat_id = temp.SHORT.get(user)
-        settings = await get_settings(chat_id)
-        if settings['is_shortlink'] and user not in PREMIUM_USER:
-            files_ = await get_file_details(file_id)
-            files = files_[0]
-            g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>🎬Fɪʟᴇ: <code>{files.file_name}</code> \n\n⚙️Sɪᴢᴇ: {get_size(files.file_size)}\n\n⬇️Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ: {g}\n\n<i>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
-                    [
+            settings = await get_settings(chat_id)
+            if settings['is_shortlink'] and user not in PREMIUM_USER:
+                files_ = await get_file_details(file_id)
+                files = files_[0]
+                g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
+                k = await client.send_message(chat_id=message.from_user.id,text=f"<b>🎬Fɪʟᴇ: <code>{files.file_name}</code> \n\n⚙️Sɪᴢᴇ: {get_size(files.file_size)}\n\n⬇️Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ: {g}\n\n<i>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
                         [
-                            InlineKeyboardButton('ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ', url=g)
-                        ], [
-                            InlineKeyboardButton('Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ?', url=await get_tutorial(chat_id))
+                            [
+                                InlineKeyboardButton('ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ', url=g)
+                            ], [
+                                InlineKeyboardButton('Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ?', url=await get_tutorial(chat_id))
+                            ]
                         ]
-                    ]
+                    )
                 )
-            )
-            await asyncio.sleep(10*60)
-            await k.edit("<b>Your message is successfully deleted!!!</b>")
-            return
+                await asyncio.sleep(10*60)
+                await k.edit("<b>Your message is successfully deleted!!!</b>")
+                return
+
     user = message.from_user.id
     files_ = await get_file_details(file_id)           
     if not files_:
