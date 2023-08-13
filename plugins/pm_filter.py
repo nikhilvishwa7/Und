@@ -1979,14 +1979,24 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
+            file_closed_del=await message.reply_photo(
+            photo=random.choice(CLOSE_IMG),
+            caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
+            await asyncio.sleep(15)                   
+            await file_closed_del.delete()
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
         await asyncio.sleep(300)
         await fuk.delete()
         await message.delete()
+        file_closed_del=await message.reply_photo(
+        photo=random.choice(CLOSE_IMG),
+        caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
+        await asyncio.sleep(15)                   
+        await file_closed_del.delete()
     except pyrogram.errors.exceptions.forbidden_403.MessageDeleteForbidden:
     # Reply with the message indicating lack of delete permission
-        await message.reply_text("I don't have the rights to delete messages for everyone.please check my permissions")
+        await message.reply_text("<b>ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ <u>ᴅᴇʟᴇᴛᴇ Mᴇssᴀɢᴇs</u> ɪɴ ɢʀᴏᴜᴘ 🥶\nᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ʏᴏᴜ ᴍᴜsᴛ ɢɪᴠᴇ ᴍᴇ <u>Dᴇʟᴇᴛᴇ Mᴇssᴀɢᴇs</u> ᴘᴇʀᴍɪssɪᴏɴ ʀɪɢʜᴛ ɴᴏᴡ ‼️</b>")
     # if spoll:
     #     await msg.message.delete()
 
