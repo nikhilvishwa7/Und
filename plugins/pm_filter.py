@@ -430,16 +430,16 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-        btn.insert(0, 
-        [
-            InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
-        ]
-    )
-        btn.insert(1,
-        [
-            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
-        ]
-    )
+#        btn.insert(0, 
+#        [
+#            InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
+#        ]
+#    )
+#        btn.insert(1,
+#        [
+#            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
+#        ]
+#   )
 
     else:
         btn = []
@@ -469,6 +469,16 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 #   btn.insert(0, [
 #      InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}")
 # ])
+    btn.insert(0, 
+        [
+            InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
+        ]
+    )
+    btn.insert(1,
+        [
+            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
+        ]
+    )
     
     # else:
     #     btn.insert(0, [
@@ -2026,7 +2036,7 @@ async def auto_filter(client, msg, spoll=False):
         await m.delete()
     except pyrogram.errors.exceptions.forbidden_403.MessageDeleteForbidden:
     # Reply with the message indicating lack of delete permission
-        await message.reply_text("I don't have the rights to delete messages for everyone.please check my permissions")
+        await message.reply_text("<b>ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ <u>ᴅᴇʟᴇᴛᴇ Mᴇssᴀɢᴇs</u> ɪɴ ɢʀᴏᴜᴘ 🥶\nᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ʏᴏᴜ ᴍᴜsᴛ ɢɪᴠᴇ ᴍᴇ <u>Dᴇʟᴇᴛᴇ Mᴇssᴀɢᴇs</u> ᴘᴇʀᴍɪssɪᴏɴ ʀɪɢʜᴛ ɴᴏᴡ ‼️</b>")
     # if spoll:
     #     await msg.message.delete()        
     try:
