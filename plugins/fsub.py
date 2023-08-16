@@ -93,7 +93,7 @@ async def f_sub_callback(bot, update):
                                                                   can_send_other_messages=True))
        await update.message.delete()
        
-@Client.on_message(filters.group & filters.command("revforsub"))
+@Client.on_message(filters.group & filters.command("checksub"))
 async def rev_f_sub_cmd(bot, message):
     m = await message.reply("Checking ForceSub channel...")
     try:
