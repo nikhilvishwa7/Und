@@ -470,6 +470,17 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     
       ###this button will show when someone choose a language  
+    if not settings["button"]:
+      btn.insert(0, 
+        [
+            InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
+        ]
+    )
+      btn.insert(1,
+        [
+            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
+        ]
+    )
 #   btn.insert(0, [
 #      InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}")
 # ])
