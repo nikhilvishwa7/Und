@@ -1112,7 +1112,6 @@ async def _verify(bot, message):
                            reply_markup=InlineKeyboardMarkup(
                                                  [[InlineKeyboardButton("✅ Approve", callback_data=f"verify_approve_{message.chat.id}"),
                                                    InlineKeyboardButton("❌ Decline", callback_data=f"verify_decline_{message.chat.id}")]]))
-    await bot.pin_chat_message(chat_id=LOG_CHANNEL, message_id=verification_msg.message_id)
     await message.reply("<b>Vᴇʀɪғɪᴄᴀᴛɪᴏɴ Rᴇǫᴜᴇsᴛ sᴇɴᴛ ✅\nI ᴡɪʟʟ ɴᴏᴛɪғʏ Yᴏᴜ Pᴇʀsᴏɴᴀʟʟʏ ᴡʜᴇɴ ɪᴛ ɪs ᴀᴘᴘʀᴏᴠᴇᴅ ‼️</b>")
 
 
@@ -1125,11 +1124,8 @@ async def verify_(bot, update):
     if update.data.split("_")[1]=="approve":
        await update_group(id, {"verified":True})
        await bot.send_message(chat_id=user, text=f"<b>Yᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ ғᴏʀ {name} ʜᴀs ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ ✅ 😍</b>")
-       await bot.unpin_chat_message(chat_id=LOG_CHANNEL, message_id=verification_msg.message_id)
        await update.message.edit(update.message.text.html.replace("#NewRequest", "#Approved"))
     else:
        await delete_group(id)
        await bot.send_message(chat_id=user, text=f"<b>Yᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ ғᴏʀ {name} ʜᴀs ʙᴇᴇɴ ᴅᴇᴄʟɪɴᴇᴅ 😐 Pʟᴇᴀsᴇ Cᴏɴᴛᴀᴄᴛ Aᴅᴍɪɴ</b>")
-       await bot.unpin_chat_message(chat_id=LOG_CHANNEL, message_id=verification_msg.message_id)
        await update.message.edit(update.message.text.html.replace("#NewRequest", "#Declined"))
-    
