@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery 
 import asyncio
 
-bot_uname = "Ps_Movies_bot"
+bot_uname = "Pm_link_yojana_bot"
 
 # Define a dictionary to store user states
 user_states = {}
