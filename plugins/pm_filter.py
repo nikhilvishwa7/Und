@@ -1429,9 +1429,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{BOT_UNAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url=CHNL_LNK),
+                    InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url=CHNL_LNK),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=GRP_LNK),
                 ],[
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
@@ -1439,7 +1439,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
                   ],[
-                    InlineKeyboardButton('🚫  ᴅᴍᴄᴀ', url="https://telegra.ph/Contant-RemovalDMCA-07-30")
+                    InlineKeyboardButton('🚫  ᴅᴍᴄᴀ', url="https://telegra.ph/Contant-RemovalDMCA-07-30"),
+                    InlineKeyboardButton('Fᴏʀᴄᴇ Sᴜʙ 🚩', callback_data='forcesub')
+
                 ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
