@@ -70,34 +70,34 @@ async def start(client, message):
             return
         btn = [
             [
-                InlineKeyboardButton(
-                    "Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=invite_link.invite_link
-                )
+                InlineKeyboardButton("❆ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
             ]
         ]
 
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
-                pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await client.send_message(
+                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+        await client.send_photo(
             chat_id=message.from_user.id,
-            text="**🌟Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ\n🌟Cᴀᴍᴇ Bᴀᴄᴋ Aɴᴅ Cʟɪᴄᴋ Tʀʏ Aɢᴀɪɴ\n🌟Yᴏᴜ Wɪʟʟ Gᴇᴛ Yᴏᴜʀ Fɪʟᴇs 👍🏻**",
+            photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
+            caption="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                  ]]
+        reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -109,7 +109,7 @@ async def start(client, message):
         file_id = data
         pre = ""
     if data.split("-", 1)[0] == "BATCH":
-        sts = await message.reply("Please wait")
+        sts = await message.reply("<b>Please wait...</b>")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -135,12 +135,21 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{title}"
             try:
+                # Create the inline keyboard button with callback_data
                 await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                            ]
+                        ]
                     )
+                )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -149,7 +158,15 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                       ]
+                        ]
                     )
+                )
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -1058,4 +1075,3 @@ async def stop_button(bot, message):
     await asyncio.sleep(3)
     await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
-
