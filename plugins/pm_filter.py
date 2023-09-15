@@ -105,12 +105,12 @@ async def pm_text(bot, message):
     if user_id in ADMINS:
         return  # ignore admins
     await message.reply_text(
-        text=f"<b>Nᴀᴍᴀsᴛʜᴇ {message.from_user.mention} Jɪ 😍 ,\n\nI Wᴏʀᴋ Oɴʟʏ Iɴ Gʀᴏᴜᴘs\nAᴅᴅ ᴍᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ</b>",
+        text=f"<b>Nᴀᴍᴀsᴛʜᴇ {message.from_user.mention} Jɪ 😍 ,\n\ni can't provide movies here\nAᴅᴅ ᴍᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ or request by clicking the button below👇🏻</b>",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Sᴜᴘᴘᴏʀᴛ 😊", url=f"https://t.me/+KK3luxGYqCg0Yjll"
+                        "request here 😊", url=f"https://t.me/+KK3luxGYqCg0Yjll"
                     )
                 ]
             ]
@@ -1437,12 +1437,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
-                  ],[
-                    InlineKeyboardButton('🚫  ᴅᴍᴄᴀ', url="https://telegra.ph/Contant-RemovalDMCA-07-30"),
-                    InlineKeyboardButton('Fᴏʀᴄᴇ Sᴜʙ 🚩', callback_data='forcesub')
-
-                ]]
+                    InlineKeyboardButton('‼️ DMCA', url=f'https://t.me/c/1860860048/2')
+                  ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -2069,7 +2065,6 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             await asyncio.sleep(300)
             await fuk.delete()
-            await message.delete()
             file_closed_del=await message.reply_photo(
             photo=random.choice(CLOSE_IMG),
             caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
@@ -2079,7 +2074,6 @@ async def auto_filter(client, msg, spoll=False):
         await save_group_settings(message.chat.id, 'auto_delete', True)
         await asyncio.sleep(300)
         await fuk.delete()
-        await message.delete()
         file_closed_del=await message.reply_photo(
         photo=random.choice(CLOSE_IMG),
         caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
