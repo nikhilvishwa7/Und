@@ -41,7 +41,7 @@ reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
-CLOSE_IMG = (environ.get('CLOSE_IMG', 'https://telegra.ph/file/d44eba716dde5861ec41c.jpg')).split()
+CLOSE_IMG = (environ.get('CLOSE_IMG', 'https://telegra.ph/file/cb806222d685f663d94c6.jpg')).split()
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://moulinath24680:unknown08642@cluster0.fzwhhum.mongodb.net/?retryWrites=true&w=majority")
