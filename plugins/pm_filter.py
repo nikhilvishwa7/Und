@@ -110,7 +110,7 @@ async def pm_text(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        "request here 😊", url=f"https://t.me/+KK3luxGYqCg0Yjll"
+                        "request here 😊", url=f"https://t.me/requestyourmoviehere"
                     )
                 ]
             ]
@@ -1431,8 +1431,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url=CHNL_LNK),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=GRP_LNK),
+                    InlineKeyboardButton("Dᴇᴀʟs⚡️ 💯 🔥", url=CHNL_LNK),
+                    InlineKeyboardButton("Mᴀɪɴ Gʀᴏᴜᴘ ❇️", url=GRP_LNK),
                 ],[
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
