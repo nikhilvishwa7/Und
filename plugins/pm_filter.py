@@ -1824,9 +1824,6 @@ async def auto_filter(client, msg, spoll=False):
     # reqstr1 = msg.from_user.id if msg.from_user else 0
     # reqstr = await client.get_users(reqstr1)
     bot = client
-    f_sub = await force_sub(bot, msg)
-    if f_sub == False:
-        return
     if not spoll:
         message = msg
         if message.text.startswith("/"): return  # ignore commands
