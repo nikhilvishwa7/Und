@@ -61,6 +61,8 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
+                                                                            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/unknown_0501"),
+                                                                         ],[
                                                                            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                                                                            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                                                                          ]]
@@ -87,14 +89,14 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Owner', url="https://t.me/Biisal")
+            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/unknown_0501")
         ],[
             InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nɪ ʟᴇғᴛ 😞 ᴛʜᴇ ɢʀᴏᴜᴘ ʙᴇᴄᴀᴜsᴇ ɪᴛ ᴅɪᴅn\'t ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴍᴇᴍʙᴇʀs, ᴀᴛ ʟᴇᴀsᴛ 100 ᴍᴇᴍʙᴇʀs.\n\nCᴏɴᴛᴀᴄᴛ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ ғᴏʀ sᴜᴘᴘᴏʀᴛ</b>',
+            text='<b>Hello Friends, \nᴍʏ ᴀᴅᴍɪɴ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ʟᴇғᴛ ᴛʜᴇ ᴄʜᴀᴛ 🙃,sᴏ ɪᴍ ʟᴇᴀᴠɪɴɢ.\nᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴀᴅᴍɪɴ.</b>',
             reply_markup=reply_markup,
         )
 
@@ -162,10 +164,10 @@ async def re_enable_chat(bot, message):
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
-    total_users = await db.total_users_count() * 13
-    totl_chats = await db.total_chat_count() * 3
-    files = int(await Media.count_documents() * 1.8)
-    size = await db.get_db_size() * 1.8
+    total_users = await db.total_users_count()
+    totl_chats = await db.total_chat_count()
+    files = int(await Media.count_documents())
+    size = await db.get_db_size()
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
