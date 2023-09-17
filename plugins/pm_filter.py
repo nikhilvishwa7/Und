@@ -2036,6 +2036,7 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             await asyncio.sleep(300)
             await fuk.delete()
+            await message.delete()
             file_closed_del=await message.reply_photo(
             photo=random.choice(CLOSE_IMG),
             caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
@@ -2045,6 +2046,7 @@ async def auto_filter(client, msg, spoll=False):
         await save_group_settings(message.chat.id, 'auto_delete', True)
         await asyncio.sleep(300)
         await fuk.delete()
+        await message.delete()
         file_closed_del=await message.reply_photo(
         photo=random.choice(CLOSE_IMG),
         caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
