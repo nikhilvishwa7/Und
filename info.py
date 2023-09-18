@@ -49,9 +49,9 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Biisal")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zxlinks.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zxlink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'e02963f90c4578126dee38fcf6c89548e5759914')
-SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'zxlinks.in')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'zxlink.in')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'e02963f90c4578126dee38fcf6c89548e5759914')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001815307493').split()]
