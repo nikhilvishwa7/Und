@@ -320,7 +320,7 @@ async def pm_text(client, msg, spoll=False):
     #             await fek.delete()
     #             await message.delete()
     # else:
-    fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+    fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
     try : 
         await m.delete()
     except pyrogram.errors.exceptions.forbidden_403.MessageDeleteForbidden:
