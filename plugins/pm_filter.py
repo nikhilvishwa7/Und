@@ -96,7 +96,7 @@ async def give_filter(client, message):
 
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
-async def pm_text(bot, message):
+async def pm_text(client, msg, spoll=False):
     curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
     # reqstr1 = msg.from_user.id if msg.from_user else 0
     # reqstr = await client.get_users(reqstr1)
