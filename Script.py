@@ -208,11 +208,13 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION = """<b>{file_name}
+    CAPTION = """<b>• ғɪʟᴇ ɴᴀᴍᴇ: {file_name}
 
-sɪᴢᴇ : {file_size}
-⚡I'm from <a href="https://t.me/requestyourmoviehere">Movie Request Group</a>👻
-⚡ Don't forget to <a href="https://t.me/share/url?url=https://t.me/requestyourmoviehere">Share Me</a>🥱</b>"""
+• ғɪʟᴇ sɪᴢᴇ : {file_size}
+
+• I'ᴍ ғʀᴏᴍ <a href="https://t.me/requestyourmoviehere">Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ</a> 👻
+• Dᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ <a href="https://t.me/share/url?url=https://t.me/requestyourmoviehere">Sʜᴀʀᴇ Mᴇ</a> 🥱
+• ᴍᴜsᴛ ᴊᴏɪɴ <a href="https://t.me/hotflashdealss">Dᴇᴀʟs</a> 😉</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
