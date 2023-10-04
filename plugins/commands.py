@@ -324,6 +324,10 @@ async def start(client, message):
                     [
                      [
                       InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                   ],[
+                      InlineKeyboardButton('ᴊᴏɪɴ ɢʀᴏᴜᴘ', url=f'https://t.me/requestyourmoviehere'),
+                   ],[
+                      InlineKeyboardButton('ᴀᴍᴀᴢɪɴɢ Dᴇᴀʟs', url=f'https://t.me/hotflashdealss'),
                    ]
                     ]
                 )
@@ -386,6 +390,10 @@ async def start(client, message):
                     [
                      [
                       InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                   ],[
+                      InlineKeyboardButton('ᴊᴏɪɴ ɢʀᴏᴜᴘ', url=f'https://t.me/requestyourmoviehere'),
+                   ],[
+                      InlineKeyboardButton('ᴀᴍᴀᴢɪɴɢ Dᴇᴀʟs', url=f'https://t.me/hotflashdealss'),
                    ]
                     ]
                 )
@@ -445,8 +453,12 @@ async def start(client, message):
             [
                      [
                       InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
-                     ]
-            ]
+                   ],[
+                      InlineKeyboardButton('ᴊᴏɪɴ ɢʀᴏᴜᴘ', url=f'https://t.me/requestyourmoviehere'),
+                   ],[
+                      InlineKeyboardButton('ᴀᴍᴀᴢɪɴɢ Dᴇᴀʟs', url=f'https://t.me/hotflashdealss'),
+                   ]
+                    ]
         )
     )   
     del_txxt = await message.reply_text("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>")
