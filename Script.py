@@ -4,8 +4,6 @@ class script(object):
 I'ᴍ Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ ʙᴏᴛ
 ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ᴀɴᴅ sᴇʀɪᴇs,
 Aᴅᴅ ᴍᴇ ᴀs ᴀ Aᴅᴍɪɴ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴇɴᴊᴏʏ 😉
-
-ᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/unknown_0501">ᴜɴᴋɴᴏᴡɴ</a> 😏</b>
 """
 
     
@@ -212,9 +210,8 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
 • ғɪʟᴇ sɪᴢᴇ : {file_size}
 
-• I'ᴍ ғʀᴏᴍ <a href="https://t.me/requestyourmoviehere">Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ</a> 👻
-• Dᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ <a href="https://t.me/share/url?url=https://t.me/requestyourmoviehere">Sʜᴀʀᴇ Mᴇ</a> 🥱
-• ᴍᴜsᴛ ᴊᴏɪɴ <a href="https://t.me/hotflashdealss">Dᴇᴀʟs</a> 😉</b>"""
+• I'ᴍ ғʀᴏᴍ <a href="https://t.me/allmovieshere019">Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ</a> 👻
+• Dᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ <a href="https://t.me/share/url?url=https://t.me/allmovieshere019">Sʜᴀʀᴇ Mᴇ</a> 🥱"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
