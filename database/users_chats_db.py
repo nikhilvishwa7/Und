@@ -1,6 +1,7 @@
 # https://github.com/odysseusmax/animated-lamp/blob/master/bot/database/database.py
 import motor.motor_asyncio
 from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL
+import datetime
 
 class Database:
     
@@ -9,7 +10,7 @@ class Database:
         self.db = self._client[database_name]
         self.col = self.db.users
         self.grp = self.db.groups
-
+        self.users = self.db.uersz
 
     def new_user(self, id, name):
         return dict(
@@ -150,5 +151,46 @@ class Database:
     async def get_db_size(self):
         return (await self.db.command("dbstats"))['dataSize']
 
+
+            # premium 
+    async def get_user(self, user_id):
+        user_data = await self.users.find_one({"id": user_id})
+        return user_data
+
+    async def update_user(self, user_data):
+        await self.users.update_one({"id": user_data["id"]}, {"$set": user_data}, upsert=True)
+
+    async def has_premium_access(self, user_id):
+        user_data = await self.get_user(user_id)
+        if user_data:
+            expiry_time = user_data.get("expiry_time")
+            if expiry_time is None:
+                return False
+            elif isinstance(expiry_time, datetime.datetime) and datetime.datetime.now() <= expiry_time:
+                return True
+            else:
+                await self.users.update_one({"id": user_id}, {"$set": {"expiry_time": None}})
+        return False
+
+    async def update_one(self, filter_query, update_data):
+        try:
+            result = await self.users.update_one(filter_query, update_data)
+            return result.matched_count == 1
+        except Exception as e:
+            print(f"Error updating document: {e}")
+            return False
+
+    async def get_expired(self, current_time):
+        expired_users = []
+        if data := self.users.find({"expiry_time": {"$lt": current_time}}):
+            async for user in data:
+                expired_users.append(user)
+        return expired_users
+
+    async def remove_premium_access(self, user_id):
+        return await self.update_one(
+            {"id": user_id}, {"$set": {"expiry_time": None}}
+    )
+                
 
 db = Database(DATABASE_URI, DATABASE_NAME)
