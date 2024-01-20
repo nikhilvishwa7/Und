@@ -22,15 +22,14 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
-    if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+    if message[.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=CHNL_LNK),
+                    InlineKeyboardButton('Gʀᴏᴜᴘ', url='https://t.me/+8mOqChNoVPA3MDE1'),
+                    InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url=CHNL_LNK),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=GRP_LNK),
-                ],[
-                    InlineKeyboardButton('👻 ʜᴇʟᴘ', url=f'https://t.me/{temp.U_NAME}?start=')
-                ]]
+                    InlineKeyboardButton('🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥', callback_data="kushal")
+                  ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -44,13 +43,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('🎭 ʜᴇʟᴘ 🎭', callback_data='help'),
+                    InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
                 ],[
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url=CHNL_LNK),
-                    InlineKeyboardButton("Mᴀɪɴ Gʀᴏᴜᴘ ❇️", url=GRP_LNK),
-                ],[
-                    InlineKeyboardButton('Bᴀᴄᴋᴜᴘ Cʜᴀɴɴᴇʟ 🔰', url=CHNL_LNK)
-                  ]]
+                    InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data='earn'),
+                    InlineKeyboardButton('🔓 ᴜᴘɢʀᴀᴅᴇ 🔓', callback_data='kushal')
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -87,7 +85,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/streaamdbbot?start=plan')
                 ],[
                     InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
                   ]]
@@ -236,7 +234,18 @@ async def start(client, message):
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
-    if data.startswith("sendfiles"):
+        if data.startswith("plan"):
+        btn = [            
+            [InlineKeyboardButton("🎁 ᴄʜᴀᴄᴋ ᴘʟᴀɴꜱ 🎁", callback_data="check")]
+        ]
+        reply_markup = InlineKeyboardMarkup(btn)
+        await message.reply_photo(
+            photo="https://graph.org/file/b2b7504687ec41b794b9a.jpg",
+            caption="<b>🔥 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs 🔥\n\n➻ <u>ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ</u>\n➻ ᴅɪʀᴇᴄᴛ ғɪʟᴇs\n➻ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ\n➻ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ\n➻ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs / sᴇʀɪᴇs\n➻ ғᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ\n\n➻ <u>वेरिफाई नई करना होगा</u>\n➻ डायरेक्ट मूवी फाइल\n➻ ऑनलाइन स्ट्रीम लिंक\n➻ फास्ट डाउनलोड लिंक\n➻ ऐडमिन कि तरफ से पूरा सपोर्ट\n➻ Req Complete in 1D\n\n💥 70 हजार मूवी वाला चेनल भी मिलेगा....✅\n\n👇 ᴄʜᴀᴄᴋ ᴀʟʟ ᴘʟᴀɴꜱ 👇</b>",
+            reply_markup=reply_markup
+        )
+        return
+        if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
         st = await client.get_chat_member(chat_id, userid)
@@ -303,7 +312,8 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
-                btn = [[
+                if not await db.has_premium_access(message.from_user.id) and not await check_verification(client, message.from_user.id):
+                    btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
@@ -343,7 +353,7 @@ async def start(client, message):
         else:
             chat_id = temp.SHORT.get(user)
             settings = await get_settings(chat_id)
-            if settings['is_shortlink'] and user not in PREMIUM_USER:
+            if settings['is_shortlink'] and not await db.has_premium_access(message.from_user.id):
                 files_ = await get_file_details(file_id)
                 files = files_[0]
                 g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
@@ -367,7 +377,8 @@ async def start(client, message):
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
-                btn = [[
+                if not await db.has_premium_access(message.from_user.id) and not await check_verification(client, message.from_user.id):
+                    btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
@@ -426,7 +437,8 @@ async def start(client, message):
     if f_caption is None:
         f_caption = f"Fɪʟᴇ:  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
-        btn = [[
+        if not await db.has_premium_access(message.from_user.id) and not await check_verification(client, message.from_user.id):
+            btn = [[
             InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
         await message.reply_text(
