@@ -49,6 +49,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Biisal")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/shortnfly/318")
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omnifly.in.net')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'ec011feae18c3dc044fb939ac4c0b7cb4f91c417')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'omnifly.in.net')
