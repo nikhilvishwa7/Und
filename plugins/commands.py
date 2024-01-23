@@ -234,7 +234,8 @@ async def start(client, message):
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
-        if data.startswith("plan"):
+     
+    if data.startswith("plan"):
         btn = [            
             [InlineKeyboardButton("🎁 ᴄʜᴀᴄᴋ ᴘʟᴀɴꜱ 🎁", callback_data="check")]
         ]
