@@ -75,7 +75,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             )
             return False
 
-        if AUTH_CHANNEL and not await is_subscribed(client, message):
+    if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
