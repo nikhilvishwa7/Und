@@ -1629,17 +1629,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sinfo":
         await query.answer(text=script.SINFO, show_alert=True)
 
+    elif query.data == "abu":
+        await query.answer(text=script.ABU_TXT, show_alert=True)
+    
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('🤨𝙰𝙱𝙾𝚄𝚃', callback_data='abu')
                 ],[
-                    InlineKeyboardButton("Dᴇᴀʟs⚡️ 💯 🔥", url=DEALS_LINK),
-                    InlineKeyboardButton("Mᴀɪɴ Gʀᴏᴜᴘ ❇️", url=GRP_LNK),
-                ],[
-                    InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('Bᴀᴄᴋᴜᴘ Cʜᴀɴɴᴇʟ 🔰', url=CHNL_LNK)
+                    InlineKeyboardButton('𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
