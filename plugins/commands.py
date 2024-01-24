@@ -978,7 +978,7 @@ async def shortlink(bot, message):
         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ᴏɴ Gʀᴏᴜᴘ! \n<a href=\"https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg">Cʟɪᴄᴋ Hᴇʀᴇ</a> Tᴏ Rᴇᴀᴅ Cᴏᴍᴘʟᴇᴛᴇ Iɴsᴛʀᴜᴄᴛɪᴏɴs</b>")
+        return await message.reply_text(f"<b>Hey {message.from_user.mention}, Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ᴏɴ Gʀᴏᴜᴘ! \n<a href=\"http://telegra.ph/How-To-Earn-Money-From-Our-Bot-07-20\">Cʟɪᴄᴋ Hᴇʀᴇ</a> Tᴏ Rᴇᴀᴅ Cᴏᴍᴘʟᴇᴛᴇ Iɴsᴛʀᴜᴄᴛɪᴏɴs</b>")
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         grpid = message.chat.id
         title = message.chat.title
