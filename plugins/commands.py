@@ -138,12 +138,9 @@ async def start(client, message):
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
-                            [
-                                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                            ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/streaamdbbot?start=plan")
-                            ]
+                         [
+                          InlineKeyboardButton('𝙾𝚆𝙽𝙴𝚁', url='t.me/J_shree_ram')
+                         ]
                         ]
                     )
                 )
