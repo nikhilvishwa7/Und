@@ -75,12 +75,26 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             )
             return False
 
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
-        try:
-            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
-        except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
-            return
+    try:
+        if not AUTH_CHANNEL:
+            raise UserNotParticipant
+        # Check if User is Already Joined Channel
+        user = await bot.get_chat_member(
+                   chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL and not db().isActive() else REQ_CHANNEL), 
+                   user_id=update.from_user.id
+               )
+        if user.status == "kicked":
+            await bot.send_message(
+                chat_id=update.from_user.id,
+                text="Sorry Sir, You are Banned to use me.",
+                parse_mode=enums.ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
+                reply_to_message_id=update.message_id
+            )
+            return False
+
+        else:
+            return True
         btn = [
             [
                 InlineKeyboardButton(
@@ -105,7 +119,19 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             )
         return False
 
-    
+    except FloodWait as e:
+        await asyncio.sleep(e.x)
+        fix_ = await ForceSub(bot, update, file_id)
+        return fix_
+
+    except Exception as err:
+        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}")
+        await update.reply(
+            text="Something went Wrong.",
+            parse_mode=enums.ParseMode.MARKDOWN,
+            disable_web_page_preview=True
+        )
+        return False
 
 
 def set_global_invite(url: str):
