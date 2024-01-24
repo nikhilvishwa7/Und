@@ -83,7 +83,7 @@ async def give_filter(client, message):
                         [
                             InlineKeyboardButton(
                                 "Mᴏᴠɪᴇ Gʀᴏᴜᴘ😊",
-                                url=f"https://t.me/+U5LCBsaRDyc3Zjk9",
+                                url=f"https://t.me/+FBt8UIQvFLA5NTY1",
                             )
                         ]
                     ]
@@ -1270,7 +1270,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("Jᴏɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
+            await query.answer("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
             return
         ident, kk, file_id = query.data.split("#")
         await query.answer(url=f"https://t.me/{temp.U_NAME}?start={kk}_{file_id}")
@@ -1555,7 +1555,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+PA8OPL2Zglk3MDM1")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+FBt8UIQvFLA5NTY1")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1580,7 +1580,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+PA8OPL2Zglk3MDM1")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+FBt8UIQvFLA5NTY1")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1749,7 +1749,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/b2b7504687ec41b794b9a.jpg")
+            InputMediaPhoto("https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg")
         ) 
         await query.message.edit_text(
             text=script.KUSHAL_TXT,
@@ -1777,7 +1777,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/b2b7504687ec41b794b9a.jpg")
+            InputMediaPhoto("https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg")
         ) 
         await query.message.edit_text(
             text=script.CHECK_TXT,
@@ -1786,7 +1786,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "plan1":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/presood"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/G0j0_S4t0rU_ofc"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/"),
@@ -1805,7 +1805,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/b2b7504687ec41b794b9a.jpg")
+            InputMediaPhoto("https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN1_TXT,
@@ -1814,7 +1814,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan2":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/presood"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/G0j0_S4t0rU_ofc"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('ʜᴏᴡ ɪᴛs ᴡᴏʀᴋ', url="https://t.me/"),
@@ -1833,7 +1833,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/b2b7504687ec41b794b9a.jpg")
+            InputMediaPhoto("https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN2_TXT,
@@ -1842,7 +1842,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan3":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/presood"), 
+            InlineKeyboardButton('sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ', url="https://t.me/G0j0_S4t0rU_ofc"), 
             InlineKeyboardButton('ᴄʜᴇᴄᴋ ᴘʟᴀɴs', callback_data='check')
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
@@ -1860,7 +1860,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/b2b7504687ec41b794b9a.jpg")
+            InputMediaPhoto("https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg")
         ) 
         await query.message.edit_text(
             text=script.PLAN3_TXT,
@@ -2060,7 +2060,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("🤵ᴄᴏɴᴛᴀᴄᴛ", url="telegram.me/Biisal")
+                    InlineKeyboardButton("🤵ᴄᴏɴᴛᴀᴄᴛ", url="telegram.me/G0j0_S4t0rU_ofc")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
