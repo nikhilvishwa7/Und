@@ -76,51 +76,35 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             return False
 
     try:
-        if not AUTH_CHANNEL:
-            raise UserNotParticipant
-        # Check if User is Already Joined Channel
-        user = await bot.get_chat_member(
-                   chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL and not db().isActive() else REQ_CHANNEL), 
-                   user_id=update.from_user.id
-               )
-        if user.status == "kicked":
-            await bot.send_message(
-                chat_id=update.from_user.id,
-                text="Sorry Sir, You are Banned to use me.",
-                parse_mode=enums.ParseMode.MARKDOWN,
-                disable_web_page_preview=True,
-                reply_to_message_id=update.message_id
-            )
-            return False
-
-        else:
-            return True
-    except UserNotParticipant:
-        text="""**Fɪʀsᴛ ᴄʟɪᴄᴋ ᴏɴ Rᴇǫᴜᴇꜱᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ . ᴛʜᴇɴ ᴄᴏᴍᴇ ʙᴀᴄᴋ ᴛᴏ ᴛʜᴇ ʙᴏᴛ ᴄʟɪᴄᴋ ᴏɴ ᴍᴇ ᴊᴏɪɴᴇᴅ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ...**"""
-
-        buttons = [
+        if AUTH_CHANNEL and not await is_subscribed(client, message):
+        try:
+            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
+        btn = [
             [
-                InlineKeyboardButton("🎗 Rᴇǫᴜᴇꜱᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ 🎗", url=invite_link)
-            ],
-            [
-                InlineKeyboardButton("㋡ Wʜʏ I'ᴍ Jᴏɪɴɪɴɢ", callback_data='whyjoin')
-            ],
-            [
-                InlineKeyboardButton("📥 Mᴇ Jᴏɪɴᴇᴅ 📥", callback_data=f"{mode}#{file_id}")
+                InlineKeyboardButton(
+                    "↺ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-ᴜᴘ Cʜᴀɴɴᴇʟ ↺", url=invite_link.invite_link
+                )
             ]
         ]
-        
-        if file_id is False:
-            buttons.pop()
 
-        if not is_cb:
-            await update.reply(
-                text=text,
-                quote=True,
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=enums.ParseMode.MARKDOWN,
+        if message.command[1] != "subscribe":
+            try:
+                kk, file_id = message.command[1].split("_", 1)
+                btn.append([InlineKeyboardButton("↺ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
+            except (IndexError, ValueError):
+                btn.append([InlineKeyboardButton("↺ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+        await client.send_photo(
+            photo = "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg",
+            chat_id=message.from_user.id,
+            # text="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            caption=script.FORCE_SUB,
+            reply_markup=InlineKeyboardMarkup(btn),
+            parse_mode=enums.ParseMode.MARKDOWN
             )
-        return False
+        return
 
     except FloodWait as e:
         await asyncio.sleep(e.x)
