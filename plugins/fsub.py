@@ -118,8 +118,3 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return False
-
-    
-def set_global_invite(url: str):
-    global INVITE_LINK
-    INVITE_LINK = url
