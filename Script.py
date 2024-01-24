@@ -1,22 +1,19 @@
 class script(object):
-    START_TXT = """<b>ʜɪ {} !
-    
-I'ᴍ Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ ʙᴏᴛ
-ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ᴀɴᴅ sᴇʀɪᴇs,
-Aᴅᴅ ᴍᴇ ᴀs ᴀ Aᴅᴍɪɴ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴇɴᴊᴏʏ 😉
-"""
+    START_TXT = """Hᴇʟʟᴏ {},
+ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀғᴜʟʟ ᴀᴜᴛᴏғɪʟᴛᴇʀ ʙᴏᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛʜᴇʀ ᴀɴᴅ ᴛʜᴇɴ ᴀᴍ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ᴛʜᴇʀᴇ
+
+✫𝐌𝐚𝐢𝐧𝐭𝐚𝐧𝐞𝐝 𝐁𝐲: <a href='https://t.me/J_shree_ram'>ɴᴏᴛʜɪɴɢ ʙʀᴏ</a>"""
 
     
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
     
-    ABOUT_TXT = """<b>
- ᴍʏ ɴᴀᴍᴇ : {}
- ᴀᴅᴍɪɴ : <a href='https://t.me/unknown_0501'>ᴜɴᴋɴᴏᴡɴ</a>
- ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a>
- ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a>
- ʜᴏsᴛᴇᴅ ᴏɴ  : <a href='https://www.heroku.com/'>Hᴇʀᴏᴋᴜ</a>
- ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ3.0 [sᴛᴀʙʟᴇ​]</b>"""
+    ABU_TXT = """🗽|𝐀𝐁𝐎𝐔𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄|🗽
+●𝗢𝘄𝗻𝗲𝗿 ✰ℕ𝕠𝕥𝕙𝕚𝕟𝕘 𝕓𝕣𝕠
+●𝘀𝗲𝗿𝘃𝗲𝗿 ✰𝗛𝗲𝗿𝗼𝗸𝘂
+●𝗡𝗮𝗺𝗲 ✰None
+
+😜í αm vєrч pσwєrfull😜"""
 
     SOURCE_TXT = """
 <b>Sᴏʀʀʏ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ Oғ Tʜɪs Bᴏᴛ ɪs Pʀɪᴠᴀᴛᴇ 
