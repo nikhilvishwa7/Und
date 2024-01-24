@@ -44,8 +44,8 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 CLOSE_IMG = (environ.get('CLOSE_IMG', 'https://telegra.ph/file/cb806222d685f663d94c6.jpg')).split()
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://moulinath24680:unknown08642@cluster0.fzwhhum.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Biisal")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Omnifly:money@cluster0.ujwgjka.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "sawn")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
