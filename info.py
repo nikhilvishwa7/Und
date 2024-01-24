@@ -49,7 +49,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "sawn")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-VERIFY = bool(environ.get('VERIFY', True))
+VERIFY = bool(environ.get('VERIFY', False))
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/OpenOmnifly")
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omnifly.in.net')
 SHORTLINK_API = environ.get('SHORTLINK_API', '45c911f1b1d6c57c9b01b64ec7780416591e5903')
