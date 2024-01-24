@@ -156,7 +156,7 @@ async def plan(client, message):
     users = message.from_user.mention 
     btn = [[
 	
-        InlineKeyboardButton("Send Screenshot", url="https://t.me/"),],[InlineKeyboardButton("Close", callback_data="close_data")
+        InlineKeyboardButton("Send Screenshot", url="https://t.me/G0j0_S4t0rU_ofc"),],[InlineKeyboardButton("Close", callback_data="close_data")
     ]]
     await message.reply_photo(photo="https://graph.org/file/3a25cf0eebca779007d1b.jpg", caption=script.CHECK_TXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(btn))
     
