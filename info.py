@@ -47,6 +47,15 @@ CLOSE_IMG = (environ.get('CLOSE_IMG', 'https://telegra.ph/file/cb806222d685f663d
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://moulinath24680:unknown08642@cluster0.fzwhhum.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Biisal")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+
+# FSUB
+auth_channel = environ.get('AUTH_CHANNEL')
+AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+# Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
+REQ_CHANNEL = environ.get("REQ_CHANNEL", False)
+REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
+JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
+
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/shortnfly/318")
