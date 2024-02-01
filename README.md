@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://telegra.ph/file/f5aa76e774ea0d510bb69.jpg" alt="@Wanda_Ki_Shakti_Bot Logo">
+  <img src="https://telegra.ph/file/f5aa76e774ea0d510bb69.jpg" alt="@Anynomas_bot Logo">
 </p>
 <h1 align="center">
   @Wanda_Ki_Shakti_Bot
