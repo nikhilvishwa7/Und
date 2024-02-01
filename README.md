@@ -2,7 +2,7 @@
   <img src="https://telegra.ph/file/f5aa76e774ea0d510bb69.jpg" alt="@Anynomas_bot Logo">
 </p>
 <h1 align="center">
-  @Wanda_Ki_Shakti_Bot
+  @Anynomas_bot
 </h1>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Wᴇʟᴄᴏᴍᴇ+Tᴏ+Wᴀɴᴅᴀ+ᴋɪ+Sʜᴀᴋᴛɪ+Bᴏᴛ;A+Sɪᴍᴘʟᴇ+Aɴᴅ+Vᴇʀʏ+PᴏᴡᴇʀFᴜʟʟ+Bᴏᴛ!;A+Bᴏᴛ+Wɪᴛʜ+Tᴇxᴛ+Fɪʟᴛᴇʀ+Mᴏᴅᴇ;Iɴᴅᴇxᴇs+Fɪʟᴇs+Aʙᴏᴠᴇ+4Gʙ;Sᴛᴀʀᴛ+Mᴇssᴀɢᴇ+Wɪᴛʜ+Pɪᴄ!;Aɴᴅ+Mᴀɴʏ+Mᴏʀᴇ+Fᴇᴀᴛᴜʀᴇs!)
@@ -47,7 +47,7 @@
 - [x] 𝐴𝑢𝑡𝑜 𝐷𝑒𝑙𝑒𝑡𝑒
 - [x] 𝐴𝑛𝑑 𝑀𝑜𝑟𝑒...
 
-<b>Hᴇʀᴇ Is A <a href='https://t.me/Wanda_Ki_Shakti_Bot'>Bᴏᴛ Sᴀᴍᴘʟᴇ ❤️‍🔥</a>.</b>
+<b>Hᴇʀᴇ Is A <a href='https://t.me/Anynomas_bot'>Bᴏᴛ Sᴀᴍᴘʟᴇ ❤️‍🔥</a>.</b>
 
 ## 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 ```
