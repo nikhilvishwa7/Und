@@ -27,8 +27,8 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://te.legra.ph/file/6f55d902f9bf2d0
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/9e33bc1ff2be06f688ff7.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5846960534 5149183428').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001979888381 -1002042178190').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5846960534 5149183428 1371807165').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '5149183428').split()]
@@ -44,29 +44,29 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 CLOSE_IMG = (environ.get('CLOSE_IMG', 'https://telegra.ph/file/cb806222d685f663d94c6.jpg')).split()
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://nk3442838:WvpyCuKJZ9I0x1iF@cluster0.bmldjuk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://RoyalDwip:RoyalDwip@cluster0.0sp6pvf.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Elsassa")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/OpenOmnifly")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '240af286612ebee3a4a330c6b822142000efd044')
-SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'publicearn.com')
-SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '240af286612ebee3a4a330c6b822142000efd044')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'modijiurl.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'f3e228611158e13010a422b5f62fae08e872a930')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'modijiurl.com')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'f3e228611158e13010a422b5f62fae08e872a930')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001815307493').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/movies_corner7')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/movies_corner7')
-DEALS_LINK = environ.get('DEALS_LINK', 'https://t.me/movies_corner7')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+fUv8WckDL7kwZWY1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/jb_corporatioonn')
+DEALS_LINK = environ.get('DEALS_LINK', 'https://t.me/+fUv8WckDL7kwZWY1')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/movies_corner7')#not added
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001537820228'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001606185333'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
@@ -80,7 +80,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001537820228')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001606185333')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
@@ -101,5 +101,5 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
 
 
-premium = environ.get('PREMIUM_LOGS', '-1002055901265')
+premium = environ.get('PREMIUM_LOGS', '-1001606185333')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
