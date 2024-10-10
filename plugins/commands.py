@@ -85,7 +85,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRoBot?start=plan')
+                    InlineKeyboardButton('🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan')
                 ],[
                     InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
                   ]]
@@ -139,7 +139,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('𝙾𝚆𝙽𝙴𝚁', url='t.me/ryzer09')
+                          InlineKeyboardButton('𝙾𝚆𝙽𝙴𝚁', url='t.me/S_u_m_m_uu')
                          ]
                         ]
                     )
@@ -158,7 +158,7 @@ async def start(client, message):
                           InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
                           InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourshortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
                          ]
                         ]
                     )
@@ -241,7 +241,7 @@ async def start(client, message):
         ]
         reply_markup = InlineKeyboardMarkup(btn)
         await message.reply_photo(
-            photo="https://telegra.ph/file/e3ab6357398c0d6ba378e.jpg",
+            photo="https://envs.sh/nbf.jpg",
             caption="<b>🔥 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs 🔥\n\n➻ <u>ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ</u>\n➻ ᴅɪʀᴇᴄᴛ ғɪʟᴇs\n➻ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ\n➻ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ\n➻ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs / sᴇʀɪᴇs\n➻ ғᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ\n\n➻ <u>वेरिफाई नई करना होगा</u>\n➻ डायरेक्ट मूवी फाइल\n➻ ऑनलाइन स्ट्रीम लिंक\n➻ फास्ट डाउनलोड लिंक\n➻ ऐडमिन कि तरफ से पूरा सपोर्ट\n➻ Req Complete in 1D\n\n💥 70 हजार मूवी वाला चेनल भी मिलेगा....✅\n\n👇 ᴄʜᴀᴄᴋ ᴀʟʟ ᴘʟᴀɴꜱ 👇</b>",
             reply_markup=reply_markup
         )
@@ -287,7 +287,7 @@ async def start(client, message):
                         ], [
                             InlineKeyboardButton('Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ?', url=await get_tutorial(chat_id))
                         ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
                         ]
                     ]
                 )
@@ -323,7 +323,7 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
                 ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRoBot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
           ]]
                 await message.reply_text(
                     text="<b>Verify First\nThen You'll Get Your Movie/Series</b>",
@@ -342,7 +342,7 @@ async def start(client, message):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
                             ]
                         ]
                     )
@@ -374,7 +374,7 @@ async def start(client, message):
                             ], [
                                 InlineKeyboardButton('Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ?', url=await get_tutorial(chat_id))
                             ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
                             ]
                         ]
                     )
@@ -395,7 +395,7 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
                 ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
           ]]
                 await message.reply_text(
                     text="<b>Verify First\nThen You'll Get Your Movie/Series</b>",
@@ -413,7 +413,7 @@ async def start(client, message):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
                             ]
                         ]
                     )
@@ -456,7 +456,7 @@ async def start(client, message):
             ],[
                         InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
             ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
             ]]
         await message.reply_text(
             text="<b>Verify First\nThen You'll Get Your Movie/Series</b>",
@@ -475,7 +475,7 @@ async def start(client, message):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/YourShortnerRobot?start=plan")
+            InlineKeyboardButton("🔥 ᴜɴʟᴏᴄᴋ ᴘʀᴇᴍɪᴜᴍ 🔥", url="https://t.me/Ardennn_bot?start=plan")
                             ]
                         ]
                     )
@@ -987,7 +987,7 @@ async def shortlink(bot, message):
     try:
         command, shortlink_url, api = data.split(" ")
     except:
-        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink omnifly.in.net 1f1da5c9df9a58058672ac8d8134e203b03426a1</code></b>")
+        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink modijiurl.com f3e228611158e13010a422b5f62fae08e872a930</code></b>")
     reply = await message.reply_text("<b>Please Wait...</b>")
     shortlink_url = re.sub(r"https?://?", "", shortlink_url)
     shortlink_url = re.sub(r"[:/]", "", shortlink_url)
